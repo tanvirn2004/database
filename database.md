@@ -5,6 +5,8 @@
 SELECT country.name AS "country name", airport.name AS "airport name"  
 FROM country JOIN airport ON country.iso_country = airport.iso_country  
 WHERE country.name = 'Iceland';
+
+
 2.
 
 
@@ -14,6 +16,8 @@ SELECT airport.name AS "airport name"
 FROM airport INNER JOIN country  
 ON airport.iso_country = country.iso_country  
 WHERE country.name = 'France' AND airport.type = 'large_airport';
+
+
 3.
 
 
@@ -23,6 +27,8 @@ SELECT country.name AS "country_name", airport.name AS "airport_name"
 FROM airport INNER JOIN country  
 ON airport.iso_country = country.iso_country  
 WHERE country.continent = 'an';
+
+
 4.
 
 ![Screenshot (81)](https://github.com/user-attachments/assets/a523ad7c-23a5-44c5-b01d-61f8bad9b6fc)
@@ -30,6 +36,8 @@ WHERE country.continent = 'an';
 select airport.elevation_ft from game, 
 airport where airport.ident = game.location 
 and game.screen_name = "heini";
+
+
 5.
 
 ![Screenshot (83)](https://github.com/user-attachments/assets/2e6d2ed5-7bf6-4149-bbad-43e7c1a194b4)
@@ -37,6 +45,8 @@ and game.screen_name = "heini";
 select airport.elevation_ft * 0.3048 as elevation_m from game,
 airport where airport.ident = game.location  
 and game.screen_name = "heini";
+
+
 6,
 
 ![Screenshot (85)](https://github.com/user-attachments/assets/fd0dab5c-a655-44e6-8554-40c23e5fb000)
@@ -44,6 +54,9 @@ and game.screen_name = "heini";
 select airport.name from game,
 airport where airport.ident = game.location 
 and game.screen_name = "Ilkka";
+
+
+
 7.
 
 ![Screenshot (90)](https://github.com/user-attachments/assets/813a67bf-75a8-4787-b1d8-c46383db19be)
@@ -52,13 +65,21 @@ JOIN airport ON airport.ident = game.location
 INNER JOIN country ON country.iso_country = airport.iso_country 
 WHERE game.screen_name = "Ilkka";
 
+
+
 8.
+
+
 ![Screenshot (91)](https://github.com/user-attachments/assets/0134d8a2-5968-4467-ba83-3e516ae68c93)
 
 select goal.name from goal
 INNER JOIN goal_reached ON goal.id = goal_reached.goal_id 
 INNER JOIN game on goal_reached.game_id = game.id
 WHERE game.screen_name = "heini"
+
+
+
+
 9. 
 
 ![Screenshot (92)](https://github.com/user-attachments/assets/b9e71133-3bfa-4f1c-af00-500868122f48)
@@ -67,6 +88,8 @@ INNER JOIN game ON airport.ident = game.location
 INNER JOIN goal_reached ON game.id = goal_reached.game_id 
 INNER JOIN goal ON goal_reached.goal_id = goal.id 
 WHERE goal.name = 'clouds' AND game.screen_name = 'Ilkka';
+
+
 10.
 
 ![Screenshot (93)](https://github.com/user-attachments/assets/57fd6f10-53a0-42ba-97cb-9a23661b811c)
