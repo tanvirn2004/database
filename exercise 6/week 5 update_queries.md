@@ -1,4 +1,6 @@
-1. update game set location = (select ident from airport where name = "Nottingham Airport"), 
+1. 
+
+update game set location = (select ident from airport where name = "Nottingham Airport"), 
 co2_consumed = co2_consumed+500 where screen_name = "Vesa";
 
 
@@ -9,19 +11,27 @@ co2_consumed = co2_consumed+500 where screen_name = "Vesa";
 
 
 
-2. Goal_reached
+2. 
+. Goal_reached
 
 
-3.DELETE FROM goal_reached;
+3.
+
+
+DELETE FROM goal_reached;
 
 Select * from goal_reached;
+
 
 ![update_queries2](https://github.com/user-attachments/assets/f7df19b9-ad26-4818-a1e8-e4038280776c)
 
 
 
 
-4.Delete from game;
+4.
+
+
+Delete from game;
 
 Select * from game; 
 
